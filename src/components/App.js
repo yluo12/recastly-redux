@@ -17,10 +17,10 @@ function App({ API_KEY, searchYouTube }) {
       query: query
     };
 
-    searchYouTube(options, (videos) =>
+    searchYouTube(options, (videos) => {
       setVideos(videos);
       setCurrentVideo(videos[0])
-    );
+    });
   }
   
    useEffect(function () {

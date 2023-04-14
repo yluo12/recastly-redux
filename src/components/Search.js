@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 function Search({ getYouTubeVideos }) {
   const [value, setValue] = useState("")
 
-  handleInputChange(e) {
+  const handleInputChange = (e) => {
     getYouTubeVideos(e.target.value);
     setValue(e.target.value)
   }

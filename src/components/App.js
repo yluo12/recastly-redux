@@ -3,7 +3,7 @@ import VideoList from './VideoList.js';
 import VideoPlayer from './VideoPlayer.js';
 import Search from './Search.js';
 
-function App({ API_KEY, searchYouTube }}) {
+function App({ API_KEY, searchYouTube }) {
   const [currentVideo, setCurrentVideo] = useState(null);
   const [videos, setVideos] = useState([])
 
@@ -11,7 +11,7 @@ function App({ API_KEY, searchYouTube }}) {
     setCurrentVideo(video);
   }
 
-  getYouTubeVideos(query) {
+  const getYouTubeVideos = (query) => {
     var options = {
       key: API_KEY,
       query: query
